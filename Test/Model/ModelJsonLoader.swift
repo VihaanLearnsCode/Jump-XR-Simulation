@@ -7,10 +7,12 @@
 
 import Foundation
 
+var modelInfos: [ModelInfo] = load("ModelDescriptions.json")
+
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
-    guard let file = Bundle.min.url(forResource: filename, withExtension: nil)
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
     else {
         fatalError("Can't find \(filename)")
     }
@@ -25,6 +27,6 @@ func load<T: Decodable>(_ filename: String) -> T {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)
     } catch {
-        fatalError("Can't ")
+        fatalError("Can't parse \(filename) as \(T.self):\n\(error)")
     }
 }

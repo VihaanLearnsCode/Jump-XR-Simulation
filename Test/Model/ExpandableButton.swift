@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+import SwiftUI
+
+struct ExpandableButton : Identifiable
+{
+    let id = UUID()
+    let label: Image
+    var action: (() -> Void)? = nil
+}

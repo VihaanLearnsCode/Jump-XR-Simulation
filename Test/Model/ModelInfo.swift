@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct ModelInfo : Identifiable, Decodable {
+    let id = UUID()
+    var name: String
+    var description: String
+    
+}
+
+
+// Placeholder for 3D model imaging and other data

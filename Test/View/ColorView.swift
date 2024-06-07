@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ColorView: View {
+    
+    var viewModel: ColorStringViewModel
+    @Binding var colorStringId: UUID?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let colorStringId = colorStringId, let colorString = viewModel.colorStrings.first(where: {$0.id == colorStringId}) {
+            VStack {
+                Text(colorString.string)
+                    .frame(width: 300, height: 300)
+                    .background(colorString.color)
+            }
+        }
     }
 }
 
-#Preview {
-    ColorView()
-}
+//#Preview {
+//    ColorView()
+//}

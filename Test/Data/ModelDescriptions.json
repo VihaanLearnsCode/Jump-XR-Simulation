@@ -1,10 +1,10 @@
 [
-``  {
-        "name:" : "Heart",
-        "description:" : "This is a model of a heart. It shows blood flow and accurately simulates pumping."
+    {
+        "name" : "Heart",
+        "description" : "ABCDEFG"
     },
     {
-        "name:" : "HeartTTTTT",
-        "description:" : "This is a model of a heart. It shows blood flow and accurately simulates pumping."
+        "name" : "HeartTTTTT",
+        "description" : "and SO do I"
     }
 ]
